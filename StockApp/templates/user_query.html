@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<h3><a href="{%url 'home'%}">Back</a></h3>
+<div class="container">
+  <h2>Send Your Query </h2>
+ <form class="user" action="{% url 'user_query_save'%}" method="POST"> 
+    {% csrf_token %}
+                                
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="email">Product_Name:</label>
+      <div class="col-sm-10">
+        
+
+        <input type="text" cclass="form-control" id="ids"
+                                        name="pro_nm"value="{% for i in prod_obj %}{{i.name}}{% endfor %}" readonly>
+                                
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="pwd">User_name:</label>
+      <div class="col-sm-10">          
+
+        <input type="text" lass="form-control" id="username"
+                                        name="uname"value="{{request.user}}" readonly>
+      </div>
+    </div>
+     <div class="form-group">
+      <label class="control-label col-sm-2" for="pwd">Message:</label>
+      <div class="col-sm-10">          
+        <textarea id="w3review" name="msg" rows="4" cols="50" required  placeholder="Your Query Here----"></textarea>
+      </div>
+    </div>
+    
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-default">Submit</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+</body>
+</html>

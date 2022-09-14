@@ -1,0 +1,427 @@
+
+
+ <! DOCTYPE html>  
+<html lang="en">  
+<head>  
+  <title> StockMarket App -Invest Money For Future </title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"> </script>  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"> </script>  
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">   
+  <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"> </script>  
+   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" > 
+    <link rel="stylesheet" type="text/css" href="static/css/bootstrap.min.css">
+         <link rel="stylesheet" type="text/css" href="static/css/animation.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" type="text/css" href="https://dev.fimo360.com/sumit/luckydollarapp.com/common/fonts/stylesheet.css" />
+        <link rel="stylesheet" type="text/css" href="static/css/luckydollar.css">
+
+
+  
+
+        
+        <link rel="shortcut icon" type="image/x-icon" />
+        <title>StockMarket App -Invest Money For Future</title>
+        
+        <meta name="author" content="Lucky Dollar App" />
+        <link href="https://www.luckydollarapp.com/" rel="canonical" />
+        <meta name="Classification" content="Lucky Dollar App" />
+        <meta name="abstract" content="https://www.luckydollarapp.com/" />
+        <meta name="audience" content="All" />
+        <meta name="robots" content="index,follow" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:title" content="Lucky Dollar App - Scratch Off Win Real Money Games" />
+        <meta property="og:description" content="Earn 10 million coins, Try Your Luck for a Quick Buck! 100% FREE TO PLAY SCRATCH AND WIN AND EARN REAL MONEY APP." />
+        <meta property="og:url" content="https://www.luckydollarapp.com/" />
+        <meta property="og:image" content="https://dev.fimo360.com/sumit/luckydollarapp.com/common/images/og.jpg" />
+        <meta property="og:site_name" content="Lucky Dollar App" />
+        <meta name="googlebot" content="index,follow" />
+        <meta name="distribution" content="Global" />
+        <meta name="Language" content="en-us" />
+        <meta name="doc-type" content="Public" />
+        <meta name="site_name" content="Lucky Dollar App" />
+        <meta name="url" content="https://www.luckydollarapp.com/" />
+            
+</head>  
+<style>  
+body {  
+  min-height: 100vh;  
+ background-color: #FFE53B;  
+  background-image: linear-gradient(147deg, #FFE53B 0%, #FF2525 100%);  
+}  
+.table {  
+  border-spacing: 0 0.85rem !important;  
+}  
+.table .dropdown {  
+  display: inline-block;  
+}  
+.table td  
+{  
+  vertical-align: middle;  
+  margin-bottom: 10px;  
+  border: none;  
+}  
+.table th {  
+  vertical-align: middle;  
+  margin-bottom: 10px;  
+  border: none;  
+}  
+.table thead tr {  
+  border: none;  
+  font-size: 12px;  
+  letter-spacing: 1px;  
+  text-transform: uppercase;  
+  background: transparent;  
+}  
+.table thead th {  
+  border: none;  
+  font-size: 12px;  
+  letter-spacing: 1px;  
+  text-transform: uppercase;  
+  background: transparent;  
+}  
+.table td {  
+  background: #fff;  
+}  
+.table td:first-child {  
+  border-top-left-radius: 10px;  
+  border-bottom-left-radius: 10px;  
+}  
+.table td:last-child {  
+  border-top-right-radius: 10px;  
+  border-bottom-right-radius: 10px;  
+}  
+.avatar {  
+  width: 2.75rem;  
+  height: 2.75rem;  
+  line-height: 3rem;  
+  border-radius: 50%;  
+  display: inline-block;  
+  background: transparent;  
+  position: relative;  
+  text-align: center;  
+  color: #868e96;  
+  font-weight: 700;  
+  vertical-align: bottom;  
+  font-size: 1rem;  
+  -webkit-user-select: none;  
+  -moz-user-select: none;  
+  -ms-user-select: none;  
+  user-select: none;  
+}  
+.avatar-sm {  
+  width: 2.5rem;  
+  height: 2.5rem;  
+  font-size: 0.83333rem;  
+  line-height: 1.5;  
+}  
+.avatar-img {  
+  width: 100%;  
+  height: 100%;  
+  -o-object-fit: cover;  
+  object-fit: cover;  
+}  
+.avatar-blue {  
+  background-color: #c8d9f1;  
+  color: #467fcf;  
+}  
+table.dataTable.dtr-inline.collapsed  
+  > tbody  
+  > tr[role="row"]  
+  > td:first-child:before,  
+table.dataTable.dtr-inline.collapsed  
+  > tbody  
+  > tr[role="row"]  
+  > th:first-child:before {  
+  top: 28px;  
+  left: 14px;  
+  border: none;  
+  box-shadow: none;  
+}  
+table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > td:first-child  
+{  
+  padding-left: 48px;  
+}  
+table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > th:first-child {  
+  padding-left: 48px;  
+}  
+table.dataTable > tbody > tr.child ul.dtr-details {  
+  width: 100%;  
+}  
+table.dataTable > tbody > tr.child span.dtr-title {  
+  min-width: 50%;  
+}  
+table.dataTable.dtr-inline.collapsed > tbody > tr > td.child,  
+table.dataTable.dtr-inline.collapsed > tbody > tr > th.child,  
+table.dataTable.dtr-inline.collapsed > tbody > tr > td.dataTables_empty {  
+  padding: 0.75rem 1rem 0.125rem;  
+}  
+div.dataTables_wrapper div.dataTables_length label,  
+div.dataTables_wrapper div.dataTables_filter label {  
+  margin-bottom: 0;  
+}  
+  
+@media (max-width: 767px) {  
+  div.dataTables_wrapper div.dataTables_paginate ul.pagination {  
+    -ms-flex-pack: center !important;  
+    justify-content: center !important;  
+    margin-top: 1rem;  
+  }  
+}  
+.btn-icon {  
+  background: #fff;  
+}  
+.btn-icon .bx {  
+  font-size: 20px;  
+}  
+.btn .bx {  
+  vertical-align: middle;  
+  font-size: 20px;  
+}  
+.dropdown-menu {  
+  padding: 0.25rem 0;  
+}  
+.dropdown-item {  
+  padding: 0.5rem 1rem;  
+}  
+.badge {  
+  padding: 0.5em 0.75em;  
+}  
+.badge-success-alt {  
+  background-color: #d7f2c2;  
+  color: #7bd235;  
+}  
+.table a {  
+  color: #212529;  
+}  
+.table a:hover,  
+.table a:focus {  
+  text-decoration: none;  
+}  
+table.dataTable {  
+  margin-top: 12px !important;  
+}  
+.icon > .bx {  
+  display: block;  
+  min-width: 1.5em;  
+  min-height: 1.5em;  
+  text-align: center;  
+  font-size: 1.0625rem;  
+}  
+.btn {  
+  font-size: 0.9375rem;  
+  font-weight: 500;  
+  padding: 0.5rem 0.75rem;  
+}  
+.avatar-blue {  
+      background-color: #c8d9f1;  
+      color: #467fcf;  
+    }  
+    .avatar-pink {  
+      background-color: #fcd3e1;  
+      color: #f66d9b;  
+    }  
+</style>  
+<body>  
+     </div>
+    </div>
+
+
+    <div class="section">
+        <div class="header-part">
+            <div class="header-section first-section">
+                 <img src="https://dev.fimo360.com/sumit/luckydollarapp.com/common/images/icons/menu.png"  alt="Menu Icons" class="menu-icon toggleonoff"/>
+                 <div class="sidebar-section">
+                     <div class="banner-part">
+                         <img src="https://dev.fimo360.com/sumit/luckydollarapp.com/common/images/banner/sidebar.jpg"  alt="Sidebar Banner" class="sidebar-banner"/>
+                          <h3>Welcome: <span>{{request.user}}</span></h3>
+                         <img src="https://dev.fimo360.com/sumit/luckydollarapp.com/common/images/icons/back.png"  alt="back-button" class="back-button toggleonoff"/>
+                     </div>
+                     <div class="menu-part">
+                         <ul>
+
+                               {% if user.is_authenticated %}
+                             <li><a href="{% url 'logout_user' %}"><img src="https://dev.fimo360.com/sumit/luckydollarapp.com/common/images/icons/logout.png"  alt="Logout" /> Logout </a></li>
+                            {%endif%}
+                         </ul>
+                     </div>
+                 </div>
+            </div>
+
+
+            <div class="header-section second-section text-center">
+                 </div>
+
+             {% if user.is_authenticated %}
+            <div class="header-section third-section">
+                <div class="coins-part">
+
+                </div>
+            </div>
+         {%else%}
+
+            <div class="header-section third-section">
+                <div class="coins-part">
+                    <a href="{% url 'user_login'%}"> Login </a>
+
+                </div>
+            </div>
+            {%endif%}
+        </div>
+    </div>
+
+<div class="container">  
+  <div class="row py-5">  
+    <div class="col-12"style="margin-top: 100px">
+      <table id="example" class="table table-hover responsive nowrap" style="width:100%">  
+        <thead>
+        <tr>
+            <th width="5%">ID</th>
+            <th>Product Name</th>
+            <th>Category</th>
+            <th>Brand</th>
+            <th>Code</th>
+            <th>Quantity</th>
+            <th>Rate</th>
+            <th>Status</th>
+
+        </tr>
+    </thead>
+       <tbody>
+
+
+        {% for product in product %}
+            <tr>
+                <td>{{ product.id }}</td>
+                <td><a href="{%url 'user_query' product.id%}">{{ product.name }}</a></td>
+                <td>{{ product.category }}</td>
+                <td>{{ product.brand }}</td>
+                <td>{{ product.code }}</td>
+                <td>{{ product.quantity }}</td>
+                <td>{{ product.rate }}</td>
+                <td>{{ product.get_status_display }}></td>
+
+
+
+
+
+                </td>
+            </tr>
+        {% endfor %}
+
+      </tbody>
+      </table> 
+      <button>Export HTML table to CSV file</button> 
+    </div>  
+  </div>  
+</div>  
+<div class="container text-center">  
+  <div class="row py-5">  
+    <div class="col-12">  
+          
+    </div>  
+  </div>  
+</div>  
+<script>  
+$(document).ready(function() {  
+  $("#example").DataTable({  
+    aaSorting: [],  
+    responsive: true,  
+    columnDefs: [  
+      {  
+        responsivePriority: 1,  
+        targets: 0  
+      },  
+      {  
+        responsivePriority: 2,  
+        targets: -1  
+      }  
+    ]  
+  });  
+  $(".dataTables_filter input")  
+    .attr("placeholder", "Search here...")  
+    .css({  
+      width: "300px",  
+      display: "inline-block"  
+    });  
+  $('[data-toggle="tooltip"]').tooltip();  
+});  
+</script>  
+
+
+      <script>
+          wow = new WOW({
+              boxClass: "wow",
+              animateClass: "animated",
+              offset: 0,
+              mobile: false,
+              live: true,
+          });
+          wow.init();
+      </script>
+     <script>
+       function download_csv(csv, filename) {
+    var csvFile;
+    var downloadLink;
+
+    // CSV FILE
+    csvFile = new Blob([csv], {type: "text/csv"});
+
+    // Download link
+    downloadLink = document.createElement("a");
+
+    // File name
+    downloadLink.download = filename;
+
+    // We have to create a link to the file
+    downloadLink.href = window.URL.createObjectURL(csvFile);
+
+    // Make sure that the link is not displayed
+    downloadLink.style.display = "none";
+
+    // Add the link to your DOM
+    document.body.appendChild(downloadLink);
+
+    // Lanzamos
+    downloadLink.click();
+}
+
+function export_table_to_csv(html, filename) {
+  var csv = [];
+  var rows = document.querySelectorAll("table tr");
+  
+    for (var i = 0; i < rows.length; i++) {
+    var row = [], cols = rows[i].querySelectorAll("td, th");
+    
+        for (var j = 0; j < cols.length; j++) 
+            row.push(cols[j].innerText);
+        
+    csv.push(row.join(","));    
+  }
+
+    // Download CSV
+    download_csv(csv.join("\n"), filename);
+}
+
+document.querySelector("button").addEventListener("click", function () {
+    var html = document.querySelector("table").outerHTML;
+  export_table_to_csv(html, "table.csv");
+});
+
+     </script>
+     
+      
+      
+      
+    <script src="static/js/luckydollar.js"></script>
+
+
+</body>  
+</html>  
+

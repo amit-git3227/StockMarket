@@ -1,0 +1,245 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="static/css/bootstrap.min.css">
+         <link rel="stylesheet" type="text/css" href="static/css/animation.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" type="text/css" href="https://dev.fimo360.com/sumit/luckydollarapp.com/common/fonts/stylesheet.css" />
+        <link rel="stylesheet" type="text/css" href="static/css/luckydollar.css">
+
+
+
+
+<div    tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"  style="display:block"; aria-hidden="true" class="modal fade loginmodal show" id="exampleModalLong">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="left-part">
+                            <div class="">
+                                <div class="heading-part">
+                                      <h3>Welcome to Stock Market</h3>
+
+                                </div>
+                                <div class="signup-login">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <button type="submit" class="btn btn-primary siginpbutton">Login</button>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <button type="submit" class="btn btn-primary signupbutton">Signup</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="right-part">
+                            <div class="loginsection">
+                                <div class="heading-part">
+
+                                    <h3>User Login</h3>
+
+                                </div>
+                                <div class="form-part">
+                                    {% if messages %}
+                                          {% for message in messages %}
+                                            <div class="alert alert-dismissible alert-success">
+                                              <button type="button" class="close" data-dismiss="alert">
+
+                                              </button>
+                                              <strong>{{message}}<strong>
+                                            </div>
+                                         {% endfor %}
+                                        {% endif %}
+                                    <form action="{% url 'Login_user' %}" method="POST" onsubmit="return myfun()">
+                                        {% csrf_token %}
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" name="email"  aria-describedby="emailHelp" placeholder="Enter User email" required />
+                                            <span  id="msg"  style="color:red;font-weight:bold"> </span>
+                                            <i class="fa fa-user"></i>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" class="form-control"name="psw" id="exampleInputPassword1" placeholder="Password" required />
+                                            <span id="msg1" style="color:red;font-weight:bold"> </span>
+                                            <i class="fa fa-lock"></i>
+                                        </div>
+                                        <input type="submit" class="btn btn-primary" value="Login" >
+                                    </form>
+
+                                </div>
+
+                            <div class="signupsection">
+                                <div class="heading-part">
+                                    <h3>User Signup</h3>
+
+                                </div>
+                                <div class="form-part">
+
+                                    <form action="{% url 'register_user' %}" method="POST"><!-- onsubmit="return myfun1()'''!-->
+                                        {%csrf_token%}
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="uname" id="exampleInput1" aria-describedby="emailHelp" placeholder="Enter full name"  />
+                                             <span  id="ms1"  style="color:red;font-weight:bold"> </span>
+                                            <i class="fa fa-user"></i>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="email" class="form-control"name="email" id="exampleInput2" aria-describedby="emailHelp" placeholder="Enter Your email" />
+                                             <span  id="ms2"  style="color:red;font-weight:bold"> </span>
+                                            <i class="fa fa-envelope"></i>
+                                        </div>
+                                         <div class="form-group">
+                                            <input type="number" class="form-control"name="mob" id="exampleInput4" aria-describedby="emailHelp" placeholder="Enter Your mobile_no" />
+                                             <span  id="ms2"  style="color:red;font-weight:bold"> </span>
+                                            <i class="fa fa-envelope"></i>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" class="form-control"name="psw" id="exampleInput3" placeholder="Password" />
+                                            <span  id="ms3"  style="color:red;font-weight:bold"> </span>
+                                            <i class="fa fa-lock"></i>
+                                        </div>
+                                        <div class="termscondition">
+                                            <input type="checkbox" class="form-check-input" id="exampleCheck1" required/>
+                                            <label class="form-check-label" for="exampleCheck1"> I agree to the <a href="#">terms & condition</a></label>
+                                        </div>
+                                        <input type="submit" class="btn btn-primary" value="Signup">
+                                    </form>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+             function validateForm() {
+              let x = document.forms["myForm"]["fname"].value;
+              if (x == "") {
+                alert("Name must be filled out");
+                return false;
+                  }
+                }
+    </script>
+
+    </script>
+     <script src="static/js/jquery-3.5.1.js"></script>
+      <script src="static/js/bootstrap.min.js"></script>
+      <script src="static/js/popper.min.js"></script>
+      <script src="static/js/wow.min.js"></script>
+    <script src="static/js/luckydollar.js"></script>
+    <script src="static/js/tictactoe.js"></script>
+    <script src="static/js/scratches.js"></script>
+
+
+
+      <script>
+          wow = new WOW({
+              boxClass: "wow",
+              animateClass: "animated",
+              offset: 0,
+              mobile: false,
+              live: true,
+          });
+          wow.init();
+      </script>
+    <script>
+        function myfun(){
+        var uname=document.getElementById("exampleInputEmail1").value;
+        if(uname==''){
+        alert("**Username field required");
+        return false;
+        }
+        var psw=document.getElementById("exampleInputPassword1").value;
+        if(psw==''){
+        alert("**Password required");
+        return false;
+        }
+
+        }
+    </script>
+    <script>
+        function myfun1(){
+        var nameRegex = /^[a-zA-Z\-]+$/;
+        var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        var pwd =  /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
+
+
+        var uname=document.getElementById("exampleInput1").value;
+        if(uname==''){
+        alert("**Username required!");
+        return false;
+            }
+
+        if(uname.length<3){
+        alert("**username must be 3 character!");
+        return false;
+        }
+        if(uname.length>20){
+        alert("**username too  Large!");
+        return false;
+        }
+        if(uname.match(nameRegex)){
+        true;
+        }
+        else{
+        alert("**only alphabets are allowed!");
+        return false;
+        }
+
+
+         var email=document.getElementById("exampleInput2").value;
+        if(email==''){
+        alert("**Email field required");
+        return false;
+        }
+
+        if(email.match(mailformat)){
+        true;
+        }
+        else{
+        alert("**You have entered an invalid email address!");
+        return false;
+        }
+
+
+
+        var psw=document.getElementById("exampleInput3").value;
+        if(psw==''){
+        alert("**Password required");
+        return false;
+        }
+
+        if(psw.length<6){
+        alert("**password must Have 6 character!");
+        return false;
+        }
+
+        if(psw.length>15){
+        alert("**password is too  Large!");
+        return false;
+        }
+
+       if(psw.match(pwd)){
+       true;
+       }
+       else{
+       alert("**password should contain atleast one number and one special character");
+       return false;
+       }
+
+       }
+    </script>
+
+
+{% endblock %}
